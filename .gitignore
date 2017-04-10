@@ -1,9 +1,10 @@
 *.txt
 *.pdf
 *.png
-data/*
-fitted_models/*
-papers/*
-.ipynb_checkpoints/*
+!requirements.txt
+data/
+fitted_models/
+papers/
+.ipynb_checkpoints/
 .DS_Store
 .Rhistory
