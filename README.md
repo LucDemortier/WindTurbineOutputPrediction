@@ -1,5 +1,5 @@
 # WindTurbineOutputPrediction
-This repository contains the Python and R Jupyter notebooks I used to work on H2O's Open Tour NYC Hackathon on July 19 and 20, 2016, and afterwards.
+This repository contains the Python and R Jupyter notebooks I used to work on H2O's Open Tour NYC Hackathon on July 19 and 20, 2016, and afterwards. See blog post at [lucdemortier.github.io](http://lucdemortier.github.io/articles/17/WindPower) for a description of the results.
 
 ## Contents
 - [1_data_preparation.ipynb](https://github.com/LucDemortier/WindTurbineOutputPrediction/blob/master/1_data_preparation.ipynb): Reads hackathon input csv files (for training and testing), creates data frames, and pickles them for Python notebooks or feathers them for R notebooks.
@@ -8,8 +8,9 @@ This repository contains the Python and R Jupyter notebooks I used to work on H2
 - [4_random_forest_regressor.ipynb](https://github.com/LucDemortier/WindTurbineOutputPrediction/blob/master/4_random_forest_regressor.ipynb): A random forest regression model which separately models each of the ten turbines, using wind velocity measurements from all zones.
 - [5_xgboost_regressor.ipynb](https://github.com/LucDemortier/WindTurbineOutputPrediction/blob/master/5_xgboost_regressor.ipynb): An XGBoost regression model.
 - [6_xgboost_classifier_plus_regressor.ipynb](https://github.com/LucDemortier/WindTurbineOutputPrediction/blob/master/6_xgboost_classifier_plus_regressor.ipynb): A combination of an XGBoost classifier and regressor. The classifier predicts which turbine outputs are zero, the regressor predicts the values of the non-zero outputs.
-- [7_gamlss_R.ipynb](https://github.com/LucDemortier/WindTurbineOutputPrediction/blob/master/7_gamlss_R.ipynb): A generalized additive model. This notebook runs an R kernel for the R package gamlss.
+- [7_gamlss_R.ipynb](https://github.com/LucDemortier/WindTurbineOutputPrediction/blob/master/7_gamlss_R.ipynb): A generalized linear model. This notebook runs an R kernel and uses the R package GAMLSS.
 - [8_check_solution.ipynb](https://github.com/LucDemortier/WindTurbineOutputPrediction/blob/master/8_check_solution.ipynb): Uses csv files with predictions created by the other notebooks to compute the RMSE for the hackathon's public and private leaderboards.
+- [summarynoprint.R](https://github.com/LucDemortier/WindTurbineOutputPrediction/blob/master/summarynoprint.R) and [wp_withdata.R](https://github.com/LucDemortier/WindTurbineOutputPrediction/blob/master/wp_withdata.R) are routines from the GAMLSS package that I had to modify slightly for the R notebook.
 
 ## Problem Statement
 Given daily 24-hours-at-a-time wind forecasts, predict the nominal wind turbine output for 10 turbines. The provided data are the turbine number, timestamp of the forecast, and forecasted [zonal and meridional wind vectors](https://en.wikipedia.org/wiki/Zonal_and_meridional) at 10 meters and 100 meters above ground. The wind data were taken in 2012 and 2013. The training data consist of the first 19 months, and the test set of the following five months (the last month only has ten records). The public leaderboard is based on the first two months of the test dataset (Aug-2013 and Sep-2013), while the rest of the test dataset is used for the private leaderboard.
