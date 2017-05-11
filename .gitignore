@@ -5,6 +5,7 @@
 data/
 fitted_models/
 papers/
+talk/
 .ipynb_checkpoints/
 .DS_Store
 .Rhistory
