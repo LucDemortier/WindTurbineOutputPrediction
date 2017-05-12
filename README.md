@@ -1,5 +1,5 @@
 # WindTurbineOutputPrediction
-This repository contains the Python and R Jupyter notebooks I used to work on H2O's Open Tour NYC Hackathon on July 19 and 20, 2016, and afterwards. See blog post at [lucdemortier.github.io](http://lucdemortier.github.io/articles/17/WindPower) for a description of the results.
+This repository contains the Python and R Jupyter notebooks I used to work on H2O's Open Tour NYC Hackathon on July 19 and 20, 2016, and afterwards. See blog post at [http://lucdemortier.github.io/articles/17/WindPower](http://lucdemortier.github.io/articles/17/WindPower) for a description of the results.
 
 ## Contents
 - [1_data_preparation.ipynb](https://github.com/LucDemortier/WindTurbineOutputPrediction/blob/master/1_data_preparation.ipynb): Reads hackathon input csv files (for training and testing), creates data frames, and pickles them for Python notebooks or feathers them for R notebooks.
