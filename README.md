@@ -21,17 +21,17 @@ Given daily 24-hours-at-a-time wind forecasts, predict the nominal wind turbine 
 
 **Data:**
 
-| Variable  | Definition                             |
-|-----------|----------------------------------------|
-| ID        | Unique ID for each observation         |
-| ZONEID    | ID of the zone / turbine               |
-| TIMESTAMP | Time at time of taking the observation |
-| U10       | Zonal Wind Vector at 10 m              |
-| V10       | Meridional Wind Vector at 10 m         |
-| U100      | Zonal Wind vector at 100 m             |
-| V100      | Meridional Wind vector at 100 m        |
-| TARGETVAR | Output of the wind turbine             |
+| Variable  | Definition                                                |
+|-----------|-----------------------------------------------------------|
+| ID        | Unique ID of observation                                  |
+| ZONEID    | Zone (turbine) ID                                         |
+| TIMESTAMP | Date and time of observation                              |
+| U10       | Zonal wind velocity at 10 m above ground                  |
+| V10       | Meridional wind velocity at 10 m above ground             |
+| U100      | Zonal wind velocity at 100 m above ground                 |
+| V100      | Meridional wind velocity at 100 m above ground            |
+| TARGETVAR | Output of wind turbine, as a fraction of maximum capacity |
 
-To learn more about U and V wind vectors, click [here](https://www.eol.ucar.edu/content/wind-direction-quick-reference).
+To learn more about the U and V wind velocity components, click [here](https://www.eol.ucar.edu/content/wind-direction-quick-reference).
 
 The full data set (including the target variable values for the test subset used for the public and private leaderboards) is available from [Dr. Tao Hong's Energy Forecasting website](http://blog.drhongtao.com/2016/07/datasets-for-energy-forecasting.html), under "GEFCom2014".
